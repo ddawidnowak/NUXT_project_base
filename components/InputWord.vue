@@ -1,7 +1,10 @@
 <template>
   <div>
-    <input v-model="inputData" />
-    <button @click="getWord(inputData)">Pobierz dane</button>
+    <div>
+      <input v-model="inputData" />
+      <button @click="getWord(inputData)">Pobierz dane</button>
+    </div>
+    <div>{{ word }}</div>
   </div>
 </template>
 
@@ -12,12 +15,14 @@ import DictionaryService from "@/services/DictionaryService.js";
 export default defineComponent({
   methods: {
     async getWord(word) {
-      const dupa = await DictionaryService.getWord(word).then((r) => r.json());
-      console.log(dupa);
+      const wordFetch = await DictionaryService.getWord(word).then((r) =>
+        r.json()
+      );
+      this.word = wordFetch;
     },
   },
   data() {
-    return { inputData: "" };
+    return { inputData: "", word: {} };
   },
 });
 </script>
