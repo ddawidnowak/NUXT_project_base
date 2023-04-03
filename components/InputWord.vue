@@ -7,22 +7,17 @@
     <div>{{ word }}</div>
     <div v-if="word">
       <h1>{{ word.word }}</h1>
+      <div v-for="meaning in word.meanings" :key="meaning.partOfSpeech">
+        {{ meaning.definitions }}
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import DictionaryService from "@/services/DictionaryService.js";
-
-export interface WordData {
-  license: any;
-  meanings: Array<any>;
-  phonetic: any;
-  phonetics: any;
-  sourceUrls: any;
-  word: string;
-}
+import DictionaryService from "~/services/DictionaryService";
+import { WordData } from "~/types/Word";
 
 export default defineComponent({
   methods: {
