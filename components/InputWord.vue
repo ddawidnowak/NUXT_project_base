@@ -76,30 +76,27 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .phonetics {
   color: $primary;
   padding: 7px;
 }
-
 h4 {
   color: gray;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 10px;
 }
-
 .partOfSpeech {
   padding: 22px 0px 12px 0px;
-}
-.partOfSpeech > * {
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 2px solid $primary;
-  border-radius: 26px;
-  padding: 0.2em 12px;
-  color: $primary;
-  font-size: 25px;
+  > * {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid $primary;
+    border-radius: 26px;
+    padding: 0.2em 12px;
+    color: $primary;
+    font-size: 25px;
+  }
 }
 .desc {
   padding: 20px;
@@ -109,22 +106,25 @@ h4 {
   font-style: italic;
   padding: 12px 0 12px 0;
 }
-
-.example > p {
-  padding: 16px 0 16px 0;
-  color: $primary;
+.example {
+  > p {
+    padding: 16px 0 16px 0;
+    color: $primary;
+    &:nth-last-of-type(1) {
+      padding: 16px 26px 16px;
+      color: black;
+    }
+  }
 }
-.example > p:nth-last-of-type(1) {
-  padding: 16px 26px 16px;
-  color: black;
-}
-.synonyms > p {
-  padding: 16px 0 16px 0;
-  color: $primary;
-}
-.synonyms > span {
-  border: 1px solid black;
-  border-radius: 26px;
-  padding: 0.2em 12px;
+.synonyms {
+  > p {
+    padding: 16px 0 16px 0;
+    color: $primary;
+  }
+  > span {
+    border: 1px solid black;
+    border-radius: 26px;
+    padding: 0.2em 12px;
+  }
 }
 </style>
