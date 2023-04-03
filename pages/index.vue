@@ -18,7 +18,7 @@ export default {
 <style lang="scss" scoped>
 .index_page {
   display: flex;
-  max-width: $content-width-pc;
+  width: $content-width-pc;
   height: 700px;
   margin: auto;
 }
@@ -28,7 +28,7 @@ export default {
 }
 .sidebar__sidebar {
   margin: 2rem;
-  width: $list-width-pc;
+  min-width: $list-width-pc;
   overflow-y: scroll;
 }
 
