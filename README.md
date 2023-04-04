@@ -1,5 +1,7 @@
 # dictionary_app
 
+Deployed app: https://clarin-jobinterview-dawidnowak.netlify.app/
+
 ## Build Setup
 
 ```bash
